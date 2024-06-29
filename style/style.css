@@ -1,0 +1,50 @@
+#heading {
+    text-align: center;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    margin:unset;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#master {
+    text-align: center;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-left: groove 1px black;
+    border-top: groove 1px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    min-height: 50px;
+    min-width: 50px;
+    background-color: white;
+}
+
+#tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+#tools > button, #chosen {
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    text-align: center;
+}
+
+#white {
+    border: solid 1px black;
+    background-image: url("../img/eraser.jpg");
+    background-size: cover;
+}
