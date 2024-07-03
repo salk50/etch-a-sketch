@@ -3,6 +3,7 @@ const chosen = document.querySelector('#chosen');
 let pagesize = 400;
 container.style.height = `${pagesize}px`;
 container.style.width = `${pagesize}px`;
+let x;
 
 //the following listens to the input field value, which will set the size of the painting area
 
@@ -56,12 +57,17 @@ function grid(a){
 
     const box = document.querySelectorAll("#container > div > div");
     box.forEach((div) => {
-        div.addEventListener("mouseover", () => {
-            console.log('mouse in');
-            div.style.backgroundColor = choice;
+        div.addEventListener('mousedown', () => {
+            x = 1;
+            console.log('mouse down');
         });
-        div.addEventListener('mouseout', () => {
-            console.log('mouse out');
+        div.addEventListener('mouseover', () => {
+            console.log('mouse over');
+            if(x==1){
+            div.style.backgroundColor = choice;}
+        });
+        div.addEventListener('mouseup', () => {
+            x = 0;
             div.style.backgroundColor = 'none';
         });
     });
@@ -102,14 +108,20 @@ function clear() {
     });
 }
 
+
 // the following will start the painting app
 box.forEach((div) => {
-    div.addEventListener("mouseover", () => {
-        console.log('mouse in');
-        div.style.backgroundColor = choice;
+    div.addEventListener('mousedown', () => {
+        x = 1;
+        console.log('mouse down');
     });
-    div.addEventListener('mouseout', () => {
-        console.log('mouse out');
+    div.addEventListener('mouseover', () => {
+        console.log('mouse over');
+        if(x == 1){ 
+        div.style.backgroundColor = choice;};
+    });
+    div.addEventListener('mouseup', () => {
+        x = 0;
         div.style.backgroundColor = 'none';
     });
 });
