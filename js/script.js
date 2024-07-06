@@ -70,6 +70,14 @@ function grid(a){
             x = 0;
             div.style.backgroundColor = 'none';
         });
+        div.addEventListener('touchstart', () => {
+            console.log('touch start');
+            div.style.backgroundColor = choice;
+        });
+        div.addEventListener('touchmove', () => {
+            console.log('touch move');
+            div.style.backgroundColor = choice;
+        });
     });
 };
 
@@ -123,5 +131,13 @@ box.forEach((div) => {
     div.addEventListener('mouseup', () => {
         x = 0;
         div.style.backgroundColor = 'none';
+    });
+    div.addEventListener('touchstart', () => {
+        console.log('touch start');
+        div.style.backgroundColor = choice;
+    });
+    div.addEventListener('touchmove', () => {
+        console.log('touch move');
+        div.style.backgroundColor = choice;
     });
 });
